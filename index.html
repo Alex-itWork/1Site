@@ -51,6 +51,7 @@
         }
         .blog {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
             margin: 20px 0;
         }
@@ -59,18 +60,25 @@
             background-color: #fff;
             padding: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
         .blog-item img {
             max-width: 100%;
             height: auto;
         }
         .contact-button {
-            background-color: #333;
+            background-color: #007BFF;
             color: #fff;
             padding: 10px 20px;
             text-decoration: none;
             display: inline-block;
             margin: 20px 0;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+        .contact-button:active {
+            background-color: #0056b3;
+            transform: scale(0.95);
         }
         footer {
             background-color: #333;
@@ -80,6 +88,11 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+        }
+        @media (max-width: 768px) {
+            .blog-item {
+                width: 90%;
+            }
         }
     </style>
 </head>
@@ -92,7 +105,7 @@
         <div class="social-links">
             <a href="https://vk.com/alex_itwork" target="_blank">Vkontakte</a>
             <a href="https://t.me/DGEM_SMM" target="_blank">Telegram</a>
-            <a href="https://wa.me/89263860959 " target="_blank">WhatsApp</a>
+            <a href="https://wa.me/89263860959" target="_blank">WhatsApp</a>
         </div>
     </header>
 
@@ -118,60 +131,12 @@
             <img src="https://habrastorage.org/webt/gj/4b/pc/gj4bpcjehktqpeiiassv-3fnmho.png" alt="Блог 3">
             <h3>Блог 3</h3>
             <p>Описание третьего блога о наших новых проектах.</p>
-
-
         </div>
     </div>
 
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Этапы разработки сайта</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        p {
-            font-size: 16px;
-            line-height: 1.5;
-            color: #555;
-        }
-        ol {
-            margin-top: 10px;
-        }
-        a {
-            display: block;
-            text-align: center;
-            background: #007BFF;
-            color: white;
-            padding: 10px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-        a:hover {
-            background: #0056b3;
-        }
-    </style>
-</head>
-<body>
     <div class="container">
         <h1>Какие этапы разработки сайта?</h1>
-        <a href="#stages">Изучить этапы</a>
+        <a href="#stages" class="contact-button">Изучить этапы</a>
         <p>Из чего состоит web разработка сайта</p>
         <p>Основные этапы от начала и до конца:</p>
         <ol>
@@ -185,11 +150,6 @@
             <li>Внесение правок.</li>
         </ol>
     </div>
-</body>
-</html>
-
-	<a>Сайт в разработке</a>
-	
 
     <footer>
         <p>2020-2025. Все права защищены.</p>
