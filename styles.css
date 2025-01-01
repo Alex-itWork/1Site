@@ -1,71 +1,110 @@
-/* styles.css */
-
+/* Основные стили */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
 }
+
+/* Стили для заголовка */
 header {
-    background-color: #333;
+    background-color: #007BFF;
     color: #fff;
-    padding: 10px; /* Делает шапку уже */
+    padding: 20px;
     text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 header h1 {
     margin: 0;
+    font-size: 2.5em;
 }
+
+/* Навигация */
 nav {
     margin-top: 10px;
 }
+
 nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 10px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
 }
+
 nav a:hover {
-    background-color: #007BFF; /* Подсветка при наведении */
+    color: #ffcc00;
 }
+
+/* Стили для социальных ссылок */
 .social-links {
     margin-top: 10px;
 }
+
 .social-links a {
-    color: #fff;
+    color: #ffcc00;
     text-decoration: none;
-    margin: 0 5px;
+    margin: 0 10px;
+    transition: color 0.3s;
 }
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Контент */
 .content {
     padding: 20px;
     text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
 }
-.content img {
-    max-width: 100%;
-    height: auto;
-    margin: 20px 0;
+
+.content h2 {
+    color: #007BFF;
+    font-size: 2em;
 }
+
+.content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Блог */
 .blog {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 20px 0;
 }
+
 .blog-item {
     width: 30%;
     background-color: #fff;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    border-radius: 8px;
+    transition: transform 0.2s;
 }
+
+.blog-item:hover {
+    transform: scale(1.05);
+}
+
 .blog-item img {
     max-width: 100%;
-    height: auto;
+    border-radius: 8px;
 }
+
+/* Кнопки */
 .contact-button {
-    background-color: #007BFF;
+    background-color: #28a745;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -74,10 +113,17 @@ nav a:hover {
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.1s;
 }
+
+.contact-button:hover {
+    background-color: #218838;
+}
+
 .contact-button:active {
-    background-color: #0056b3;
+    background-color: #1e7e34;
     transform: scale(0.95);
 }
+
+/* Этапы разработки */
 .container {
     max-width: 800px;
     margin: auto;
@@ -85,20 +131,36 @@ nav a:hover {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: none; /* Скрыть блок по умолчанию */
-    text-align: center; /* Центрируем текст */
+    display: none; /* Изначально скрыто */
 }
+
+/* Футер */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
+
+footer p {
+    margin: 0;
+}
+
+/* Адаптивность */
 @media (max-width: 768px) {
     .blog-item {
         width: 90%;
+        margin-bottom: 20px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .content h2 {
+        font-size: 1.5em;
     }
 }
