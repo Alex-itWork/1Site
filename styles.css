@@ -36,7 +36,7 @@ h3 {
 
 /* Шапка */
 header {
-    background-color: #3498db;
+    background-color: hsl(204, 78%, 65%);
     color: white;
     padding: 1rem 0;
     text-align: center;
