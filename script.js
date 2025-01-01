@@ -1,27 +1,60 @@
-document.addEventListener('DOMContentLoaded', () => {
-    let currentIndex = 0;
-    const slides = document.querySelectorAll('.carousel-item');
+// script.js
 
-    function showSlide(index) {
-        slides.forEach((slide, idx) => {
-            slide.classList.remove('active');
-            if (idx === index) {
-                slide.classList.add('active');
-            }
-        });
-    }
+// Функция для управления каруселью
 
-    window.moveSlide = function(direction) {
-        currentIndex += direction;
+let currentSlide = 0;
 
-        if (currentIndex < 0) {
-            currentIndex = slides.length - 1; // Зацикливание
-        } else if (currentIndex >= slides.length) {
-            currentIndex = 0; // Зацикливание
-        }
+const slides = document.querySelectorAll('.carousel-item');
 
-        showSlide(currentIndex);
-    };
+function showSlide(index) {
 
-    showSlide(currentIndex);
+    slides.forEach((slide, i) => {
+
+        slide.classList.toggle('active', i === index);
+
+    });
+
+}
+
+function moveSlide(direction) {
+
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+
+    showSlide(currentSlide);
+
+}
+
+// Инициализация карусели
+
+showSlide(currentSlide);
+
+// Обработка кликов по кнопкам обратной связи
+
+document.querySelectorAll('.contact-button').forEach(button => {
+
+    button.addEventListener('click', () => {
+
+        alert('Спасибо за ваш интерес! Мы свяжемся с вами в ближайшее время.');
+
+    });
+
 });
+
+// Плавная прокрутка к якорям
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener('click', function (e) {
+
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+
+            behavior: 'smooth'
+
+        });
+
+    });
+
+});
+
