@@ -43,7 +43,7 @@ header {
 }
 
 header nav a {
-    color: white;
+    color: rgb(180, 163, 163);
     text-decoration: none;
     margin: 0 1rem;
     font-weight: bold;
