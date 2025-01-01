@@ -1,4 +1,7 @@
-/* Общие стили */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -7,54 +10,49 @@ body {
     color: #333;
 }
 
-/* Стили для заголовка */
 header {
     background-color: #007BFF;
     color: #fff;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
 }
 
-/* Навигация */
 nav {
-    margin-top: 10px;
+    margin: 0 20px;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 10px;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #ffcc00;
-}
-
-/* Стили для социальных ссылок */
-.social-links {
-    margin-top: 10px;
+    text-decoration: underline;
 }
 
 .social-links a {
     color: #ffcc00;
     text-decoration: none;
     margin: 0 10px;
-    transition: color 0.3s;
 }
 
 .social-links a:hover {
     text-decoration: underline;
 }
 
-/* Контент */
+main {
+    padding: 20px;
+}
+
 .content {
     padding: 20px;
     text-align: center;
@@ -62,84 +60,17 @@ nav a:hover {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
-    max-width: 800px;
 }
 
 .content h2 {
     color: #007BFF;
-    font-size: 2em;
 }
 
-.content p {
-    font-size: 1.2em;
-    line-height: 1.6;
-}
-
-/* Блог */
-.blog {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 20px 0;
-}
-
-.blog-item {
-    width: 30%;
-    background-color: #fff;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    border-radius: 8px;
-    transition: transform 0.2s;
-}
-
-.blog-item img {
+.content img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
 }
 
-.blog-item:hover {
-    transform: scale(1.05);
-}
-
-.blog-item h3 {
-    font-size: 1.5em;
-    margin: 10px 0;
-}
-
-.blog-item p {
-    font-size: 1em;
-    line-height: 1.4;
-}
-
-/* Контейнер для этапов разработки */
-.container {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 800px;
-}
-
-.container h1 {
-    text-align: center;
-    font-size: 2em;
-}
-
-.container p {
-    font-size: 1em;
-    line-height: 1.5;
-}
-
-/* Стили для списков */
-ol {
-    padding-left: 20px;
-    margin: 20px 0;
-}
-
-/* Кнопки */
 .contact-button {
     background-color: #28a745;
     color: #fff;
@@ -155,17 +86,71 @@ ol {
     background-color: #218838;
 }
 
-.contact-button:active {
-    background-color: #1e7e34;
-    transform: scale(0.95);
+.carousel {
+    text-align: center;
 }
 
-/* Футер */
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+    padding: 20px;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px;
+    position: relative;
 }
 
 footer p {
@@ -175,13 +160,16 @@ footer p {
 /* Адаптивность */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2em;
+        font-size: 1.8em;
     }
-    .content h2 {
-        font-size: 1.5em;
+
+    .contact-button, .prev, .next {
+        font-size: 1em;
+        padding: 8px;
     }
-    .blog-item {
+
+    .carousel-item {
         width: 90%;
-        margin-bottom: 20px;
+        margin: 0 auto;
     }
 }
