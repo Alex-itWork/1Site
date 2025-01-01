@@ -1,0 +1,104 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px; /* Делает шапку уже */
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+}
+nav {
+    margin-top: 10px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+nav a:hover {
+    background-color: #007BFF; /* Подсветка при наведении */
+}
+.social-links {
+    margin-top: 10px;
+}
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+.content {
+    padding: 20px;
+    text-align: center;
+}
+.content img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+.blog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+.blog-item {
+    width: 30%;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.blog-item img {
+    max-width: 100%;
+    height: auto;
+}
+.contact-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+.contact-button:active {
+    background-color: #0056b3;
+    transform: scale(0.95);
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Скрыть блок по умолчанию */
+    text-align: center; /* Центрируем текст */
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .blog-item {
+        width: 90%;
+    }
+}
