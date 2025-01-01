@@ -1,4 +1,4 @@
-/* Основные стили */
+/* Общие стили */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -93,13 +93,50 @@ nav a:hover {
     transition: transform 0.2s;
 }
 
+.blog-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
 .blog-item:hover {
     transform: scale(1.05);
 }
 
-.blog-item img {
-    max-width: 100%;
+.blog-item h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.blog-item p {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/* Контейнер для этапов разработки */
+.container {
+    padding: 20px;
+    background-color: #fff;
     border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+.container p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Стили для списков */
+ol {
+    padding-left: 20px;
+    margin: 20px 0;
 }
 
 /* Кнопки */
@@ -123,26 +160,12 @@ nav a:hover {
     transform: scale(0.95);
 }
 
-/* Этапы разработки */
-.container {
-    max-width: 800px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: none; /* Изначально скрыто */
-}
-
 /* Футер */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
 
 footer p {
@@ -151,16 +174,14 @@ footer p {
 
 /* Адаптивность */
 @media (max-width: 768px) {
-    .blog-item {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-
     header h1 {
         font-size: 2em;
     }
-
     .content h2 {
         font-size: 1.5em;
+    }
+    .blog-item {
+        width: 90%;
+        margin-bottom: 20px;
     }
 }
