@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +9,15 @@
     <meta name="author" content="Фабрика Приключений">
     <title>Фабрика приключений</title>
     <link rel="stylesheet" href="styles.css"> <!-- Подключение CSS -->
-    <script>
-        function toggleStages() {
-            const container = document.querySelector('.container');
-            container.style.display = (container.style.display === 'block') ? 'none' : 'block';
-        }
-    </script>
+    <script src="script.js" defer></script> <!-- Подключение JavaScript файла -->
 </head>
+
 <body>
     <header>
         <h1>Фабрика приключений</h1>
         <nav>
-            <a href="javascript:void(0)" onclick="toggleStages()">Контакты</a>
+            <a href="#contacts">Контакты</a>
+            <a href="#feedback">Обратная связь</a>
         </nav>
         <div class="social-links">
             <a href="https://vk.com/alex_itwork" target="_blank">Vkontakte</a>
@@ -74,4 +72,5 @@
         <p>2020-2025. Все права защищены.</p>
     </footer>
 </body>
+
 </html>
